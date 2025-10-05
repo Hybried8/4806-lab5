@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Buddies List</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+<h1>Buddy List</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+    </tr>
+    <tr th:each="buddy : ${buddies}">
+        <td th:text="${buddy.id}"></td>
+        <td th:text="${buddy.name}"></td>
+        <td th:text="${buddy.address}"></td>
+        <td th:text="${buddy.phoneNumber}"></td>
+    </tr>
+</table>
+</body>
+</html>
